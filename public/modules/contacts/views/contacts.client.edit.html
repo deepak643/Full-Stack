@@ -1,0 +1,17 @@
+<section data-ng-controller='EditController'>
+	<h2>{{contact.firstName}} {{contact.lastName}}</h2>
+
+	<form name='editContact' class='form-horizontal'>
+		<form-field record='contact' recordType='contactType' field='firstName' required='true'></form-field>
+		<form-field record='contact' recordType='contactType' field='lastName' required='true'></form-field>
+		<form-field record='contact' recordType='contactType' field='{{k}}' ng-repeat=' (k, v) in contact | contactDisplayFilter: "firstName" | contactDisplayFilter: "lastName" | contactDisplayFilter: "__v" | contactDisplayFilter: "_id" | contactDisplayFilter: "userName"'></form-field>
+
+		<new-field record='contact'></new-field>
+
+		<div class='row form-group'>
+			<div class='col-sm-offset-2'>
+				<button class='btn btn-danger' ng-click='delete()'>Delete Contact</button>
+			</div>
+		</div>
+	</form>
+</section>

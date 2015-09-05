@@ -1,0 +1,8 @@
+{
+	"root": "public/assets/js",
+	"config": "public/assets/js/config.js",  # Optional
+	"styles_root": "public/assets/sass",       # Optional
+	"exclude": ['jquery.js', 'require.js'],  # Optional
+	"build_config": "public/assets/js/build.json", # Optional
+	"node_path": "/my/node/install/folder"   # Optional
+}
